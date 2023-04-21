@@ -35,12 +35,13 @@
     all: unset;
     height: 35px;
     width: 96%;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     box-shadow: rgba(255, 255, 255, 0.568) 0px 4px 12px;
 }
 
 .cards {
     display: flex;
+    justify-content: center;
     height: auto;
     flex-flow: row wrap;
     gap: 30px 20px;
@@ -65,6 +66,7 @@
     width: inherit;
     max-height: 70%;
     height: 230px;
+    object-fit: contain;
 }
 
 .cardContent {
@@ -101,8 +103,8 @@
 
 .cardContent>button:hover {
     cursor: pointer;
-    color: black;
-    background-color: white;
+    color: black !important;
+    background-color: white !important;
     transition: 0.3s;
     outline: 1px solid;
 }
@@ -125,7 +127,7 @@
     all: unset;
     background-color: white;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     height: 30px;
     border-radius: 5px;
     padding: 5px 12px;
@@ -138,7 +140,7 @@
     all: unset;
     background-color: white;
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     height: 30px;
     border-radius: 5px;
     padding: 5px 12px;
@@ -172,7 +174,8 @@
 }
 
 .baseList>ul>li {
-    background:no-repeat center;
+    background: repeat center;
+    background-size: 100%;
     outline: 1px solid rgb(148, 148, 148);
     margin: 12px auto;
     padding: 10px;
@@ -226,7 +229,7 @@
     white-space: pre-wrap;
     color: rgb(255, 255, 255);
     text-shadow: 3px 3px 5px rgb(0, 0, 0);
-    backdrop-filter: blur(4px) ;
+    backdrop-filter: blur(0.9rem);
     background-color: rgba(0, 0, 0, 0.37);
     border-radius: 3px;
     padding: 0 6px;
@@ -273,13 +276,13 @@
 }
 
 .upBtn {
-    bottom: 12px !important;
-    left: 6px;
+    bottom: 10px !important;
+    left: 10px;
     background-color: black !important;
-    width: 69% !important;
+    width: 67% !important;
     outline: 1px solid white;
     text-align: center;
-    height: 34px !important;
+    height: 16px !important;
 }
 
 .disabled {
@@ -301,6 +304,11 @@
     opacity: 0.3;
 }
 
+.toaster>div>div>div:hover {
+    cursor: pointer !important;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(75, 75, 75));
+}
+
 .baseList>ul>li:last-child.current {
     opacity: 1;
     animation-name: fadeIn;
@@ -312,18 +320,28 @@
     visibility: visible !important;
 }
 
+.noResult {
+    margin-top: 100px;
+    font-size: 20px;
+    margin: auto;
+    color: gainsboro;
+}
+
 @keyframes fadeIn {
     0% {
         transform: scale(0);
         opacity: 0.0;
     }
+
     60% {
         transform: scale(1.1);
     }
+
     80% {
         transform: scale(0.9);
         opacity: 1;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -335,13 +353,16 @@
         -webkit-transform: scale(0);
         opacity: 0.0;
     }
+
     60% {
         -webkit-transform: scale(1.1);
     }
+
     80% {
         -webkit-transform: scale(0.9);
         opacity: 1;
     }
+
     100% {
         -webkit-transform: scale(1);
         opacity: 1;

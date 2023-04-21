@@ -1,9 +1,10 @@
 body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    font-family: 'Edu NSW ACT Foundation', cursive;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-family: 'Merriweather', serif;
+  background-color: #2E2E2E;
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
